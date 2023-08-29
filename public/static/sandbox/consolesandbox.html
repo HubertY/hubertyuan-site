@@ -1,0 +1,21 @@
+<html>
+
+<body>
+    <div id="root"></div>
+    <code id="log"></code>
+    <script>
+        const logger = document.getElementById("log");
+        console.log = (...arguments) => {
+            for (let i = 0; i < arguments.length; i++) {
+                if (typeof arguments[i] == 'object') {
+                    logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(arguments[i], undefined, 2) : arguments[i]) + '<br />';
+                } else {
+                    logger.innerHTML += arguments[i] + '<br />';
+                }
+            }
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
+</body>
+
+</html>
