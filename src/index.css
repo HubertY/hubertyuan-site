@@ -72,6 +72,36 @@ a[href=""] {
     border-radius: 8px;
 }
 
+.nav-item.primary {
+    background-color: blanchedalmond;
+}
+
+div.imgscrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.imgscrollmenu span {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.imgplaceholder {
+    display: block;
+    height: 500px;
+    width: 500px;
+    background: #ff0000;
+}
+
+.cool-container {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+
 #showcase {
     flex: 1 1 auto;
     display: flex;
@@ -121,6 +151,10 @@ a[href=""] {
     padding-right: 10px;
 }
 
+.project-navlist span {
+    padding-left: 10px;
+}
+
 .project-description {
     padding-left: 25px;
     padding-right: 25px;
@@ -157,4 +191,8 @@ a[href=""] {
 
 .main-links a {
     display: block;
+}
+
+.main-links.large a {
+    font-size: large;
 }

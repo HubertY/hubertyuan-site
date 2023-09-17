@@ -26,14 +26,20 @@ function AuthNotice({ set }: { set: SecretDecryptor }) {
 export function Home() {
     const [secret, setSecret] = useContext(SecretContext);
     return <>
-        <p>Hi, I'm Hubert. I'm a Bachelor of Computer Science from the <a href='https://iiis.tsinghua.edu.cn/en/yaoclass/' target="_blank" rel="nofollow noreferrer">Yao Class</a> at the Institute for Interdisciplinary Information Sciences, at Tsinghua University.</p>
+        <p>Hi, I'm Hubert. I graduated with a Bachelor's of Computer Science from the <a href='https://iiis.tsinghua.edu.cn/en/yaoclass/' target="_blank" rel="nofollow noreferrer">Yao Class</a> at the Institute for Interdisciplinary Information Sciences, at Tsinghua University.</p>
         <p>email me at <ProtectedEmail /></p>
         <br />
         {!secret && <AuthNotice set={setSecret} />}
-        <div className='main-links'>
-            <NavLink to="/">resume (pdf)</NavLink>
-            <a href="/static/files/thesis_en.pdf" rel="nofollow noreferrer">thesis (pdf)</a>
+        <div className='main-links large'>
             <NavLink to="/project">project directory</NavLink>
+            <NavLink to="/cool">cool people and things</NavLink>
+            <NavLink to="/about">about me</NavLink>
+        </div>
+        <br />
+        <div className='main-links'>
+            <a href="/static/files/thesis_en.pdf" rel="nofollow noreferrer">thesis (pdf)</a>
+            <NavLink to="/">resume (pdf)</NavLink>
+
         </div>
     </>;
 }
